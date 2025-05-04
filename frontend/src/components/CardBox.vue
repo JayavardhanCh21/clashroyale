@@ -3,6 +3,7 @@
     <div
       v-for="(group, rarity) in groupedCards"
       :key="rarity"
+      :id="rarity.toLowerCase()"
       class="rarity-section"
     >
       <h2 :class="['rarity-title', rarity.toLowerCase()]">{{ rarity }}</h2>
@@ -53,7 +54,7 @@ export default {
 }
 
 .common {
-  color: deepskyblue;
+  color: skyblue;
 }
 .rare {
   color: rgb(221, 232, 13);
@@ -71,12 +72,6 @@ export default {
 @media (max-width: 1024px) {
   .gridCard {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1025px) {
-  .gridCard {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

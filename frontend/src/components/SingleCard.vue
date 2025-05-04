@@ -18,8 +18,6 @@
         </span>
       </p>
     </div>
-    <!-- 
-    <div class="rarity-label">{{ card.rarity }}</div> -->
   </div>
 </template>
 
@@ -44,7 +42,7 @@ export default {
 .card-container {
   border-radius: 12px;
   padding: 1rem;
-  background: #2a2a2a;
+  background: #0b2e33;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -67,7 +65,7 @@ export default {
 }
 
 .elixir {
-  background-color: #8240ff;
+  background-color: #517891;
   padding: 6px 12px;
   border-radius: 50%;
   font-weight: bold;
@@ -88,7 +86,6 @@ export default {
   color: #999;
 }
 
-/* Rarity border accents */
 .common {
   border-left: 6px solid lightgray;
 }
@@ -110,7 +107,7 @@ export default {
   top: 10px;
   right: 10px;
   font-size: 0.8rem;
-  background: #444;
+  background: #ffc2ba;
   padding: 3px 8px;
   border-radius: 6px;
   text-transform: uppercase;

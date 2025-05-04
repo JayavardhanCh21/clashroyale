@@ -1,11 +1,14 @@
 <template>
-  <MyHeader cardName="Clash Royale Cards Guide" devName="JayaVardhan" />
+  <MyHeader
+    :cardName="'Clash Royale Cards Guide'"
+    :devName="'Jayavardhan'"
+    :rarities="uniqueRarities"
+  />
 
   <CardBox :cards="cards[0].cards" />
 </template>
 
 <script>
-//Importing the component
 import MyHeader from "./components/MyHeader.vue";
 import CardBox from "./components/CardBox.vue";
 
@@ -29,6 +32,13 @@ export default {
       return data;
     },
   },
+  computed: {
+    uniqueRarities() {
+      if (!this.cards[0]) return [];
+      return [...new Set(this.cards[0].cards.map((c) => c.rarity))];
+    },
+  },
+
   async created() {
     this.cards = await this.fetchcards();
   },
@@ -42,11 +52,14 @@ export default {
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
   padding: 2rem;
-  background-color: #111;
+  background-color: #517891;
   color: white;
 }
 
@@ -55,7 +68,7 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 0.3em solid black;
+  border: 0.3em solid #bdb96a;
   padding: 30px;
   border-radius: 5px;
 }
