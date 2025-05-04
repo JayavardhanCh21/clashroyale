@@ -37,10 +37,9 @@ async function main() {
   const client = new MongoClient(uri);
 
   try {
-    // Connect to the MongoDB cluster
     await client.connect();
     console.log(" connection happened here");
-    const data = await fetchTrainDetails(client);
+    const data = await fetchCardDetails(client);
     return data;
   } catch (e) {
     console.log("Something went wrong while connecting to the database");
@@ -53,12 +52,10 @@ async function main() {
 
 main();
 
-async function fetchTrainDetails(client) {
+async function fetchCardDetails(client) {
   try {
     const cursor = client.db("clashroyale").collection("cards").find({});
     const results = await cursor.toArray();
-    //const js= (JSON.stringify(results));
-    //console.log(js);
     return JSON.stringify(results);
   } catch (error) {
     console.log("Something went wrong when fetching the data");
@@ -69,7 +66,7 @@ async function fetchTrainDetails(client) {
 const server = http.createServer(async (req, res) => {
   if (req.url === "/api") {
     const content = main();
-    content.then((trainDetails) => {
+    content.then((cardDetails) => {
       res.setHeader("Access-Control-Allow-Origin", "*");
       res.setHeader("Access-Control-Allow-Methods", "GET");
       res.setHeader(
@@ -77,7 +74,7 @@ const server = http.createServer(async (req, res) => {
         "X-Requested-With,content-type"
       );
       res.writeHead(200, { "content-type": "application/json" });
-      res.end(trainDetails);
+      res.end(cardDetails);
     });
   } else {
     let filePath = path.join(
@@ -100,7 +97,7 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3586;
+const PORT = process.env.PORT || 7207;
 
 server.listen(PORT, () =>
   console.log(`Great our server is running on port ${PORT} `)
