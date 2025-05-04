@@ -45,7 +45,11 @@ export default {
 
 body {
   font-family: "Montserrat", sans-serif;
+  padding: 2rem;
+  background-color: #111;
+  color: white;
 }
+
 .container {
   max-width: 400px;
   margin: 30px auto;
