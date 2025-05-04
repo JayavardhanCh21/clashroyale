@@ -1,0 +1,94 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "name": "Knight",
+      "rarity": "Common",
+      "type": "Troop",
+      "elixir": 3,
+      "evolution": false,
+      "targets": "Ground"
+    },
+    {
+      "id": 2,
+      "name": "Archers",
+      "rarity": "Common",
+      "type": "Troop",
+      "elixir": 3,
+      "evolution": true,
+      "targets": "Air & Ground"
+    },
+    {
+      "id": 3,
+      "name": "Musketeer",
+      "rarity": "Rare",
+      "type": "Troop",
+      "elixir": 4,
+      "evolution": false,
+      "targets": "Air & Ground"
+    },
+    {
+      "id": 4,
+      "name": "Bomb Tower",
+      "rarity": "Rare",
+      "type": "Building",
+      "elixir": 4,
+      "evolution": false,
+      "targets": "Ground"
+    },
+    {
+      "id": 5,
+      "name": "Baby Dragon",
+      "rarity": "Epic",
+      "type": "Troop",
+      "elixir": 4,
+      "evolution": false,
+      "targets": "Air & Ground"
+    },
+    {
+      "id": 6,
+      "name": "Freeze",
+      "rarity": "Epic",
+      "type": "Spell",
+      "elixir": 4,
+      "evolution": false,
+      "targets": "Ground"
+    },
+    {
+      "id": 7,
+      "name": "Princess",
+      "rarity": "Legendary",
+      "type": "Troop",
+      "elixir": 3,
+      "evolution": true,
+      "targets": "Air & Ground"
+    },
+    {
+      "id": 8,
+      "name": "Log",
+      "rarity": "Legendary",
+      "type": "Spell",
+      "elixir": 2,
+      "evolution": false,
+      "targets": "Ground"
+    },
+    {
+      "id": 9,
+      "name": "Monk",
+      "rarity": "Champion",
+      "type": "Troop",
+      "elixir": 4,
+      "evolution": false,
+      "targets": "Ground"
+    },
+    {
+      "id": 10,
+      "name": "Golden Knight",
+      "rarity": "Champion",
+      "type": "Troop",
+      "elixir": 4,
+      "evolution": true,
+      "targets": "Ground"
+    }
+  ]
+}
