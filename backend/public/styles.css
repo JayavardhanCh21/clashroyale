@@ -112,18 +112,16 @@ header {
 
 /* Experience Section */
 .experience {
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .experience1,
 .experience2 {
-  padding: 15px;
+  /* padding: 15px; */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  box-sizing: border-box;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* 
+  box-sizing: border-box; */
   overflow: hidden;
   word-wrap: break-word;
 }
@@ -151,7 +149,7 @@ header {
 }
 
 .company p {
-  margin: 10px 0 0;
+  /* margin: 10px 0 0; */
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
@@ -309,10 +307,36 @@ footer {
   background: transparent;
 }
 
-/* Media Query */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem;
+}
+
 @media (max-width: 500px) {
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
   .nav-container ul {
     display: none;
+  }
+
+  .nav-container ul.active {
+    display: flex;
+    flex-direction: column;
+    background: #9bd3d1;
+  }
+  .nav-container ul li {
+    display: none;
+  }
+
+  .nav-container ul li.mobile-only {
+    display: block;
   }
 
   .nav-container::before {
